@@ -5,7 +5,7 @@
 	<name>Declarative Test</name>
 	<summary>/</summary>
 	<description>/</description>
-	<version>0.0.3</version>
+	<version>0.0.1</version>
 	<licence>agpl</licence>
 	<author mail="tobias.kaminsky@nextcloud.com" homepage="">Tobias Kaminsky</author>
 	<namespace>DeclarativeTest</namespace>

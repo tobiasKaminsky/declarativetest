@@ -14,7 +14,8 @@ use OCP\AppFramework\OCSController;
 /**
  * @psalm-suppress UnusedClass
  */
-class ApiController extends OCSController {
+class ApiController extends OCSController
+{
 	/**
 	 * An example API endpoint
 	 *
@@ -24,7 +25,8 @@ class ApiController extends OCSController {
 	 */
 	#[NoAdminRequired]
 	#[ApiRoute(verb: 'GET', url: '/api')]
-	public function index(): DataResponse {
+	public function index(): DataResponse
+	{
 		return new DataResponse(
 			['message' => 'Hello world!']
 		);
@@ -39,7 +41,8 @@ class ApiController extends OCSController {
 	 */
 	#[NoAdminRequired]
 	#[ApiRoute(verb: 'GET', url: '/all')]
-	public function all(): JSONResponse {
+	public function all(): JSONResponse
+	{
 		return new JSONResponse(
 			[
 				'Button' => [
@@ -51,5 +54,53 @@ class ApiController extends OCSController {
 				]
 			]
 		);
+	}
+
+	/**
+	 * First version
+	 *
+	 * @return JSONResponse
+	 *
+	 * 200: Data returned
+	 */
+	#[NoAdminRequired]
+	#[ApiRoute(verb: 'GET', url: '/version1')]
+	public function version1(): JSONResponse
+	{
+		return new JSONResponse(
+			[
+				'version' => 0.1,
+				'root' => [
+					"orientation" => "vertical",
+					"rows" => [
+						[
+							"children" => [
+								[
+									"element" => "Button",
+									"type" => "primary",
+									"label" => "Submit"
+								],
+								[
+									"element" => "Button",
+									"type" => "secondary",
+									"label" => "Cancel"
+								]
+							]
+						],
+						[
+							"children" => [
+								[
+									"element" => "Text",
+									"text" => "Hello World!"
+								],
+								[
+									"element" => "Image",
+									"url" => "/core/img/logo/logo.png"
+								]
+							]
+						]
+					]
+				]
+			]);
 	}
 }

@@ -19,7 +19,8 @@ class Capabilities implements ICapability {
 		return [
 			'declarativeui' => [
 				'context-menu' => [
-					["List all UI elements", "/ocs/v2.php/apps/declarativetest/all"]
+					["List all UI elements", "/ocs/v2.php/apps/declarativetest/all"],
+					["First version", "/ocs/v2.php/apps/declarativetest/version1"]
 				],
 			]
 		];

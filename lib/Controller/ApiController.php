@@ -45,12 +45,28 @@ class ApiController extends OCSController
 	{
 		return new JSONResponse(
 			[
-				'Button' => [
-					'label' => "Submit",
-					'type' => "primary",
-				],
-				'Image' => [
-					'url' => "/core/img/logo/logo.png"
+				'version' => 0.1,
+				'root' => [
+					"orientation" => "vertical",
+					"rows" => [
+						[
+							"children" => [
+								[
+									'Button' => [
+										'label' => "Submit",
+										'type' => "primary",
+									],
+									'Image' => [
+										'url' => "/core/img/logo/logo.png"
+									],
+									[
+										"element" => "Text",
+										"text" => "Hello World!"
+									],
+								]
+							]
+						]
+					]
 				]
 			]
 		);
@@ -97,6 +113,36 @@ class ApiController extends OCSController
 									"element" => "Image",
 									"url" => "/core/img/logo/logo.png"
 								]
+							]
+						]
+					]
+				]
+			]);
+	}
+
+	/**
+	 * Dummy new deck board
+	 *
+	 * @return JSONResponse
+	 *
+	 * 200: Data returned
+	 */
+	#[NoAdminRequired]
+	#[ApiRoute(verb: 'GET', url: '/newDeckBoard')]
+	public function newDeckBoard(): JSONResponse
+	{
+		return new JSONResponse(
+			[
+				'version' => 0.1,
+				'root' => [
+					"orientation" => "vertical",
+					"rows" => [
+						[
+							"children" => [
+								[
+									"element" => "Text",
+									"text" => "Create Deck Board!"
+								],
 							]
 						]
 					]

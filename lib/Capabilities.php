@@ -22,6 +22,9 @@ class Capabilities implements ICapability {
 					["List all UI elements", "/ocs/v2.php/apps/declarativetest/all"],
 					["First version", "/ocs/v2.php/apps/declarativetest/version1"]
 				],
+				'create-new' => [
+					["Deck board", "/ocs/v2.php/apps/declarativetest/newDeckBoard"],
+				],
 			]
 		];
 	}

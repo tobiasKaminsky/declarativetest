@@ -22,14 +22,14 @@ class Capabilities implements ICapability
 			'declarativeui' => [
 				"hooks" => [
 					[
-						"name" => "context-menu",
+						"type" => "context-menu",
 						"endpoints" => [
 							["name" => "List all UI elements", "url" => "/ocs/v2.php/apps/declarativetest/all"],
 							["name" => "First version", "url" => "/ocs/v2.php/apps/declarativetest/version1"]
 						]
 					],
 					[
-						"name" => "create-new",
+						"type" => "create-new",
 						"endpoints" => [
 							["name" => "Deck board", "url" => "/ocs/v2.php/apps/declarativetest/newDeckBoard"],
 						]

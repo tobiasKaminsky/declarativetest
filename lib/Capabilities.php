@@ -11,20 +11,30 @@ namespace OCA\DeclarativeTest;
 
 use OCP\Capabilities\ICapability;
 
-class Capabilities implements ICapability {
+class Capabilities implements ICapability
+{
 	/**
 	 * @return array{files: array{comments: bool}}
 	 */
-	public function getCapabilities(): array {
+	public function getCapabilities(): array
+	{
 		return [
 			'declarativeui' => [
-				'context-menu' => [
-					["List all UI elements", "/ocs/v2.php/apps/declarativetest/all"],
-					["First version", "/ocs/v2.php/apps/declarativetest/version1"]
-				],
-				'create-new' => [
-					["Deck board", "/ocs/v2.php/apps/declarativetest/newDeckBoard"],
-				],
+				"hooks" => [
+					[
+						"name" => "context-menu",
+						"endpoints" => [
+							["name" => "List all UI elements", "url" => "/ocs/v2.php/apps/declarativetest/all"],
+							["name" => "First version", "url" => "/ocs/v2.php/apps/declarativetest/version1"]
+						]
+					],
+					[
+						"name" => "create-new",
+						"endpoints" => [
+							["name" => "Deck board", "url" => "/ocs/v2.php/apps/declarativetest/newDeckBoard"],
+						]
+					],
+				]
 			]
 		];
 	}

@@ -26,9 +26,9 @@ class Capabilities implements ICapability
 						"endpoints" => [
 							["name" => "List all UI elements", "url" => "/ocs/v2.php/apps/declarativetest/all"],
 							["name" => "First version", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
-							["name" => "Convert file", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
+							["name" => "Convert to PDF", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "image/*"],
 							["name" => "Create transcript", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "audio/*"],
-							["name" => "Create zip file", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "application/zip"],
+							["name" => "Create zip file", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
 						]
 					],
 					[

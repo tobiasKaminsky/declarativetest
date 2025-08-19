@@ -29,6 +29,7 @@ class Capabilities implements ICapability
 							["name" => "Convert to PDF", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "image/"],
 							["name" => "Create transcript", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "audio/"],
 							["name" => "Create zip file", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
+							["name" => "Unzip", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "application/zip"],
 						]
 					],
 					[

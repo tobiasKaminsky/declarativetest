@@ -25,13 +25,17 @@ class Capabilities implements ICapability
 						"type" => "context-menu",
 						"endpoints" => [
 							["name" => "List all UI elements", "url" => "/ocs/v2.php/apps/declarativetest/all"],
-							["name" => "First version", "url" => "/ocs/v2.php/apps/declarativetest/version1"]
+							["name" => "First version", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
+							["name" => "Convert file", "url" => "/ocs/v2.php/apps/declarativetest/version1"],
+							["name" => "Create transcript", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "audio/*"],
+							["name" => "Create zip file", "url" => "/ocs/v2.php/apps/declarativetest/version1", "filter" => "application/zip"],
 						]
 					],
 					[
 						"type" => "create-new",
 						"endpoints" => [
 							["name" => "Deck board", "url" => "/ocs/v2.php/apps/declarativetest/newDeckBoard"],
+							["name" => "New Contact", "url" => "/ocs/v2.php/apps/declarativetest/newContact"],
 						]
 					],
 				]
